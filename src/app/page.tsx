@@ -42,11 +42,12 @@ export default function Home() {
         audioRef.current = null;
       }
     };
-  });
+  }, []);
 
   useEffect(() => {
     const playAudio = async () => {
       const audio = audioRef.current
+
       try {
         if (audio && isPlaying) {
           await audio.play();
@@ -59,6 +60,7 @@ export default function Home() {
         console.error('Error playing audio:', error);
       }
     };
+
     playAudio();
   }, [isPlaying]);
 
@@ -69,7 +71,6 @@ export default function Home() {
   function musicStart() {
     setStart(true)
     toggleMusic()
-    console.log(start)
   }
   
 

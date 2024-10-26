@@ -5,17 +5,19 @@ import Image from "next/image";
 
 const imageUrls = 
     [
-        "/icons/icon0.jpg",
-        "/icons/icon1.jpg",
-        "/icons/icon2.jpg",
-        "/icons/icon3.jpg",
-        "/icons/icon4.jpg",
-        "/icons/icon5.jpg",
+        "/assets/icons/icon0.jpg",
+        "/assets/icons/icon1.jpg",
+        "/assets/icons/icon2.jpg",
+        "/assets/icons/icon3.jpg",
+        "/assets/icons/icon4.jpg",
+        "/assets/icons/icon5.jpg",
     ]
 
 const IconToggle: React.FC = () => {
 
-    const [imageUrl, setImageUrl] = useState<string>("/icons/icon0.jpg");
+    const randomStartIndex = Math.floor(Math.random() * imageUrls.length)
+    const randomStart = imageUrls[randomStartIndex]
+    const [imageUrl, setImageUrl] = useState<string>(randomStart);
 
     const generateRandomImage = () => {
         const randomIndex = 
