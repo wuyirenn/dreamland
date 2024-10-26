@@ -42,7 +42,7 @@ export default function Home() {
         audioRef.current = null;
       }
     };
-  }, []);
+  });
 
   useEffect(() => {
     const playAudio = async () => {
