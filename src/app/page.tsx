@@ -69,6 +69,7 @@ export default function Home() {
   function musicStart() {
     setStart(true)
     toggleMusic()
+    console.log(start)
   }
   
 
@@ -81,10 +82,11 @@ export default function Home() {
         <ShootingStars />
         <StarsBackground />
         <div className="fixed bg-stars bg-cover bg-center bg-no-repeat h-screen w-screen -z-[100] transition-opacity animate-fadeIn duration-1000"
-        style={{
-          filter: "brightness(0.6) contrast(2) saturate(2) grayscale(100%)"
-        }}></div>
-        <div className="flex flex-col items-center">
+          style={{
+            filter: "brightness(0.6) contrast(2) saturate(2) grayscale(100%)"
+          }}>
+        </div>
+        <div className="flex flex-col items-center z-50">
           <div className="opacity-0 animate-fadeIn delay-500 duration-1000" onClick={musicStart}>
             <Button>START</Button>
           </div>

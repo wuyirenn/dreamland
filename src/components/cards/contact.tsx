@@ -19,9 +19,9 @@ const Contact = () => {
             <div className="h-14 md:h-10"></div>
             <div>
                 <div className="font-normal text-right text-md tracking-[0.05em]">
-                    If you want to build that world too, <br className="md:hidden" />or simply say hello, find me at:
+                    If you want to create this world, <br className="md:hidden" />or simply say hello, find me at:
                     <br />
-                    <a href="mailto:wuyirenn.com" className="font-semibold">wuyirenn@gmail.com</a>
+                    <a href="mailto:wuyirenn@gmail.com" target="_blank" className="font-semibold">wuyirenn@gmail.com</a>
                 </div>
             </div>
             </div>

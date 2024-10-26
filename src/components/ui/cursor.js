@@ -9,7 +9,7 @@ const Cursor = ({ isActive, radius }) => {
     const mouse = useRef({x: 0, y: 0});
     const delayedMouse = useRef({x: 0, y: 0});
     const rafId = useRef(null);
-    const circle = useRef([]);
+    const circle = useRef();
     const size = radius
     
     const lerp = (x, y, a) => x * (1 - a) + y * a
@@ -39,7 +39,7 @@ const Cursor = ({ isActive, radius }) => {
         gsap.set(circle.current, {x, y, xPercent: -50, yPercent: -50})
     }
 
-    useEffect( () => {
+    useEffect(() => {
         animate();
         window.addEventListener("mousemove", manageMouseMove);
         return () => {
@@ -49,7 +49,7 @@ const Cursor = ({ isActive, radius }) => {
     }, [isActive])
 
     return (
-        <div className="relative mix-blend-difference pointer-events-none -z-50">
+        <div className="relative mix-blend-difference pointer-events-none -z-[100]">
             <div 
                 style={{
                     borderColor: "#ffffff",
