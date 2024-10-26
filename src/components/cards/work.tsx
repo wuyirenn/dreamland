@@ -26,7 +26,7 @@ const Work = () => {
                     </div>
                     <div className="col-span-full">   
                         {`Lately, I've been working on a few projects. I'm still processing photos from Taiwan, and been sketching as a creative outlet. I've
-                        been exploring the intersection between knowledge graphs (Neo4j), IFC (ifcopenshell and topologicpy), and various graph/NLP/RAG
+                        also been exploring the intersection between knowledge graphs (Neo4j), IFC (ifcopenshell and topologicpy), and various graph/NLP/RAG
                         techniques. It's been a blast becoming technical, and while this realm in particular is quite tough to crack, I enjoy the challenge.`}
                     </div>
                 </div>
