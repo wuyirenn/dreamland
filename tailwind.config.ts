@@ -53,7 +53,8 @@ const config = {
       },
 
       maxWidth: {
-        "card": "calc(100% - 22vw)"
+        "card": "calc(100% - 22vw)",
+        "smcard": "calc(100% - 26vw)"
       },
 
       colors: {

@@ -104,22 +104,22 @@ export default function Home() {
           <Navbar handleMusic={toggleMusic} isPlaying={isPlaying}/>
         </div>
         <div id="/" className="flex flex-col w-full h-[100vh] items-center justify-center">
-          <div onMouseOver={()=>handleOver(240)} onMouseLeave={()=>handleLeave(22)}>
+          <div className="max-w-smcard md:max-w-card" onMouseOver={()=>handleOver(240)} onMouseLeave={()=>handleLeave(22)}>
             <Intro />
           </div> 
         </div>
         <div className="flex flex-col w-full h-[100vh] items-center justify-center">
-          <div className="max-w-card" onMouseOver={()=>handleOver(240)} onMouseLeave={()=>handleLeave(22)}>
+          <div className="max-w-smcard md:max-w-card" onMouseOver={()=>handleOver(240)} onMouseLeave={()=>handleLeave(22)}>
             <AboutMe />
           </div> 
         </div>
         <div id="work" className="flex flex-col w-full h-[100vh] items-center justify-center">
-          <div className="max-w-card" onMouseOver={()=>handleOver(240)} onMouseLeave={()=>handleLeave(22)}>
+          <div className="max-w-smcard md:max-w-card" onMouseOver={()=>handleOver(240)} onMouseLeave={()=>handleLeave(22)}>
             <Work />
           </div> 
         </div>
         <div id="contact" className="flex flex-col w-full h-[100vh] items-center justify-center">
-          <div className="max-w-card" onMouseOver={()=>handleOver(240)} onMouseLeave={()=>handleLeave(22)}>
+          <div className="max-w-smcard md:max-w-card" onMouseOver={()=>handleOver(240)} onMouseLeave={()=>handleLeave(22)}>
             <Contact />
           </div> 
         </div>
