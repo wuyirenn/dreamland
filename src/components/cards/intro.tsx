@@ -22,7 +22,7 @@ const Intro = () => {
                     CHRISTIAN WU // 吳以仁
                 </h1>
                 <div className="h-2"></div>
-                <ul className="relative font-semibold text-7xl md:text-8xl lg:text-[7rem] tracking-tight drop-shadow-md">
+                <ul className="relative font-semibold text-5xl sm:text-7xl md:text-8xl lg:text-[7rem] tracking-tight drop-shadow-md">
                     <IntroLine delay="delay-1100">DREAM</IntroLine>
                     <IntroLine delay="delay-1300">THE</IntroLine>
                     <IntroLine delay="delay-1500">IMPOSSIBLE</IntroLine>

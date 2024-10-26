@@ -103,23 +103,23 @@ export default function Home() {
         <div onMouseOver={()=>handleOver(46)} onMouseLeave={()=>handleLeave(22)}>
           <Navbar handleMusic={toggleMusic} isPlaying={isPlaying}/>
         </div>
-        <div id="/" className="flex flex-col w-full h-[100vh] items-center justify-center">
-          <div className="max-w-smcard md:max-w-card" onMouseOver={()=>handleOver(240)} onMouseLeave={()=>handleLeave(22)}>
+        <div id="/" className="flex flex-col w-full min-h-[100vh] items-center justify-center">
+          <div className="max-w-xscard sm:max-w-smcard md:max-w-card my-12" onMouseOver={()=>handleOver(240)} onMouseLeave={()=>handleLeave(22)}>
             <Intro />
           </div> 
         </div>
-        <div className="flex flex-col w-full h-[100vh] items-center justify-center">
-          <div className="max-w-smcard md:max-w-card" onMouseOver={()=>handleOver(240)} onMouseLeave={()=>handleLeave(22)}>
+        <div className="flex flex-col w-full min-h-[100vh] items-center justify-center">
+          <div className="max-w-xscard sm:max-w-smcard md:max-w-card my-12" onMouseOver={()=>handleOver(240)} onMouseLeave={()=>handleLeave(22)}>
             <AboutMe />
           </div> 
         </div>
-        <div id="work" className="flex flex-col w-full h-[100vh] items-center justify-center">
-          <div className="max-w-smcard md:max-w-card" onMouseOver={()=>handleOver(240)} onMouseLeave={()=>handleLeave(22)}>
+        <div id="work" className="flex flex-col w-full min-h-[100vh] items-center justify-center">
+          <div className="max-w-xscard sm:max-w-smcard md:max-w-card my-12" onMouseOver={()=>handleOver(240)} onMouseLeave={()=>handleLeave(22)}>
             <Work />
           </div> 
         </div>
-        <div id="contact" className="flex flex-col w-full h-[100vh] items-center justify-center">
-          <div className="max-w-smcard md:max-w-card" onMouseOver={()=>handleOver(240)} onMouseLeave={()=>handleLeave(22)}>
+        <div id="contact" className="flex flex-col w-full min-h-[100vh] items-center justify-center">
+          <div className="max-w-xscard sm:max-w-smcard md:max-w-card my-12" onMouseOver={()=>handleOver(240)} onMouseLeave={()=>handleLeave(22)}>
             <Contact />
           </div> 
         </div>

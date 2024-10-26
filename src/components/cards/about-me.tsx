@@ -20,11 +20,11 @@ const AboutMe = () => {
     return (
         <main className="relative">
             <div className="text-white font-avantgarde drop-shadow-md">
-                <div className="font-semibold text-left text-md tracking-[0.15em] drop-shadow">
+                <div className="font-semibold text-left text-sm sm:text-base tracking-[0.15em] drop-shadow">
                     ABOUT ME
                 </div>
                 <br></br>
-                <div className="font-semibold text-5xl md:text-6xl lg:text-7xl text-left">
+                <div className="font-semibold text-3xl sm:text-5xl md:text-6xl lg:text-7xl text-left">
                     {`I'm a people-oriented `}<br />
                     <Roles />
                     focused on environmental action and social equity.

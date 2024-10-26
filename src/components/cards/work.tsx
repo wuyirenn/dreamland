@@ -5,7 +5,7 @@ const Work = () => {
     return (
         <main className="relative">
             <div className="text-white font-avantgarde drop-shadow-md">
-                <h1 className="font-semibold text-left text-md tracking-[0.15em] drop-shadow">
+                <h1 className="font-semibold text-left text-sm sm:text-base tracking-[0.15em] drop-shadow">
                     MY WORK
                 </h1>
                 <br></br>
