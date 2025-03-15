@@ -21,7 +21,7 @@ export default function RootLayout({
         NunitoSans.variable,
         AvantGarde.variable
       )}>
-        <main className="relative flex min-h-screen">
+        <main className="relative flex min-h-screen cursor-crosshair">
           <div className="flex-grow flex-1">
             {children}
           </div>

@@ -1,7 +1,8 @@
 "use client"
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 const imageUrls = 
     [
@@ -14,23 +15,31 @@ const imageUrls =
     ]
 
 const IconToggle: React.FC = () => {
-
-    const randomStartIndex = Math.floor(Math.random() * imageUrls.length)
-    const randomStart = imageUrls[randomStartIndex]
-    const [imageUrl, setImageUrl] = useState<string>(randomStart);
+    const pathname = usePathname();
+    const [imageUrl, setImageUrl] = useState<string>(imageUrls[Math.floor(Math.random() * imageUrls.length)]);
 
     const generateRandomImage = () => {
-        const randomIndex = 
-            Math.floor(Math.random() * imageUrls.length);
+        const randomIndex = Math.floor(Math.random() * imageUrls.length);
         setImageUrl(imageUrls[randomIndex]);
     }
     
     return (
         <button onClick={generateRandomImage} className="opacity-0 animate-fadeIn duration-700 delay-600">
-            <Image src={imageUrl} width="32" height="32" style={{objectFit: "contain", borderRadius:"4px", borderColor:"white", borderWidth:"1px"}} alt="Icon image"/>
+            <Image 
+                src={imageUrl} 
+                width="32" 
+                height="32" 
+                style={{
+                    objectFit: "contain", 
+                    borderRadius: "4px", 
+                    borderColor: pathname === "/" ? "white" : "#a6a09b",
+                    borderWidth: "1px",
+                    borderStyle: "solid"
+                }} 
+                alt="Icon image"
+            />
         </button>
     )
-
 }
 
 export default IconToggle;

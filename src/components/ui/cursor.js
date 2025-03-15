@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
+import { usePathname } from "next/navigation";
 
 
 const Cursor = ({ isActive, radius }) => {
@@ -11,6 +12,8 @@ const Cursor = ({ isActive, radius }) => {
     const rafId = useRef(null);
     const circle = useRef();
     const size = radius
+
+    const pathname = usePathname();
     
     const lerp = (x, y, a) => x * (1 - a) + y * a
 
@@ -49,17 +52,19 @@ const Cursor = ({ isActive, radius }) => {
     }, [isActive])
 
     return (
-        <div className="relative mix-blend-difference pointer-events-none -z-[100]">
+        <div className="relative mix-blend-difference pointer-events-none z-[250]">
             <div 
                 style={{
-                    borderColor: "#ffffff",
+                    borderColor: pathname !== "/" ? "#78716c" : "#ffffff",
                     borderWidth: "1px",
+                    borderStyle: "solid",
                     width: size,
                     height: size,
                     WebkitBackdropFilter: "saturate(1.75) contrast(1.1) brightness(1.1) hue-rotate(-15deg)",
                     backdropFilter: "saturate(1.75) contrast(1.1) brightness(1.1) hue-rotate(-15deg)",
                     borderRadius: "9999px",
-                    transition: `height 0.3s ease-out, width 0.3s ease-out`
+                    transition: `height 0.3s ease-out, width 0.3s ease-out`,
+                    pointerEvents: "none"
                 }}
                 className="top-0 left-0 fixed" 
                 ref={circle}

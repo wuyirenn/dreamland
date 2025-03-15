@@ -18,7 +18,9 @@ interface NavItemProps {
 
 const NavItem: React.FC<NavItemProps> = ({ to, delay, children }) => {
     return (
-        <div className={`opacity-0 animate-fadeIn duration-700 ${delay} text-right font-nunitosans font-bold tracking-wide text-sm py-[0.25rem] pointer-events-auto`}>
+        <div className={`opacity-0 animate-fadeIn duration-700 ${delay} 
+        text-right font-nunitosans font-bold tracking-wide text-sm hover:text-base 
+        py-[0.25rem] pointer-events-auto transition-transform duration-300 ease-in-out`}>
             <Link href="#" to={to} spy={true} smooth={true} duration={500}>{children}</Link>
         </div>
     );
@@ -55,8 +57,8 @@ const Navbar: React.FC<NavbarProps> = ({ handleMusic, isPlaying }) => {
     const [color, setColor] = useState<string>("text-transparent");
 
     useEffect(() => {
-        const isWhite = pathname === "/" || pathname === "/archive" || pathname === "/work";
-        setColor(isWhite ? "text-white" : "text-black");
+        const isWhite = pathname === "/";
+        setColor(isWhite ? "text-white" : "text-stone-500");
     }, [pathname]);
 
     // animating the music icon
@@ -71,17 +73,17 @@ const Navbar: React.FC<NavbarProps> = ({ handleMusic, isPlaying }) => {
 
     return (
         <main className={`fixed w-full z-50 top-0 left-0 ${color}`}>
-            <div className="fixed top-[-.25rem] left-[-.25rem] m-nav p-1 drop-shadow">
+            <div className="fixed top-[-.25rem] left-[-.25rem] m-nav p-1 drop-shadow-md">
                 <IconToggle />
             </div>
-            <div className="fixed top-[-.25rem] right-0 m-nav drop-shadow"> 
+            <div className="fixed top-[-.25rem] right-0 m-nav drop-shadow-md"> 
                 <ul>
                     <NavItem to="/" delay="delay-600">HOME</NavItem>
                     <NavItem to="about" delay="delay-700">ABOUT</NavItem>
                     <NavItem to="work" delay="delay-800">WORK</NavItem>
                 </ul>
             </div>
-            <div className="fixed bottom-0 left-0 m-nav drop-shadow">
+            <div className="fixed bottom-0 left-0 m-nav drop-shadow-md">
                 <IconLink href="https://open.spotify.com/user/christianwu000" delay="delay-1500">
                     <AiFillCustomerService size={22} />
                 </IconLink>

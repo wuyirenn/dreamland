@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useMemo, useCallback } from "react";
 import Navbar from "@/components/ui/navbar";
 import Intro from "@/components/cards/intro";
 import AboutMe from "@/components/cards/about-me";
@@ -19,16 +19,19 @@ export default function Home() {
   const [isPlaying, setPlaying] = useState(false)
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
-  // states for cursor
-  function handleOver (n: number) {
-    setIsActive(true);
-    setRadius(n)
-  }
+  // Memoize the cursor component
+  const cursorElement = useMemo(() => <Cursor isActive={isActive} radius={radius} />, [isActive, radius]);
 
-  function handleLeave (n: number) {
+  // Use useCallback for event handlers
+  const handleOver = useCallback((n: number) => {
+    setIsActive(true);
+    setRadius(n);
+  }, []);
+
+  const handleLeave = useCallback((n: number) => {
     setIsActive(false);
-    setRadius(n)
-  }
+    setRadius(n);
+  }, []);
 
   // initialize music
   useEffect(() => {
@@ -64,14 +67,14 @@ export default function Home() {
     playAudio();
   }, [isPlaying]);
 
-  function toggleMusic() {
+  const toggleMusic = useCallback(() => {
     setPlaying(prev => !prev)
-  }
+  }, []);
 
-  function musicStart() {
+  const musicStart = useCallback(() => {
     setStart(true)
     toggleMusic()
-  }
+  }, [toggleMusic]);
   
 
   // block 1: 'start' page
@@ -79,7 +82,7 @@ export default function Home() {
   // + cursor
   return (
     <main className="">
-      <div className={`flex w-full h-[100vh] items-center justify-center select-none cursor-crosshair ${start ? 'hidden' : 'visible'}`}>
+      <div className={`flex w-full h-[100vh] items-center justify-center select-none ${start ? 'hidden' : 'visible'}`}>
         <ShootingStars />
         <StarsBackground />
         <div className="fixed bg-stars bg-cover bg-center bg-no-repeat h-screen w-screen -z-[100] transition-opacity animate-fadeIn duration-1000"
@@ -98,7 +101,7 @@ export default function Home() {
         </div>  
       </div>
       
-      <div className={`relative w-full h-[300vh] select-none overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none'] cursor-crosshair ${start ? 'visible' : 'hidden'}`}>
+      <div className={`relative w-full h-[300vh] select-none overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none'] ${start ? 'visible' : 'hidden'}`}>
         <div className="fixed bg-odyssey bg-cover bg-center bg-no-repeat h-screen w-screen -z-[100] transition-opacity animate-fadeIn duration-700"></div>
         <div onMouseOver={()=>handleOver(46)} onMouseLeave={()=>handleLeave(22)}>
           <Navbar handleMusic={toggleMusic} isPlaying={isPlaying}/>
@@ -125,7 +128,7 @@ export default function Home() {
         </div> */}
       </div>
 
-      <Cursor isActive={isActive} radius={radius}/>
+      {cursorElement}
     </main>
   );
 }
