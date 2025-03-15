@@ -26,8 +26,8 @@ const config = {
     extend: {
 
       backgroundImage: {
-        "odyssey": "url('../images/composites/alto-odyssey.webp')",
-        "stars": "url('../images/composites/stars.webp')",
+        "odyssey": "url('/assets/images/composites/alto-odyssey.webp')",
+        "stars": "url('/assets/images/other/stars.webp')",
       },
 
       fontFamily: {
@@ -49,13 +49,15 @@ const config = {
       },
 
       width: {
-        "card": "calc(100% - 25vw)"
+        "card": "calc(100% - 22vw)",
+        "smcard": "calc(100% - 26vw)",
+        "xscard": "calc(100% - 28vw)"
       },
 
       maxWidth: {
         "card": "calc(100% - 22vw)",
         "smcard": "calc(100% - 26vw)",
-        "xscard": "calc(100% - 30vw)"
+        "xscard": "calc(100% - 28vw)"
       },
 
       colors: {

@@ -18,11 +18,13 @@ const Intro = () => {
     return (
         <main className="">
             <div className="text-white font-avantgarde text-center">
-                <h1 className="font-semibold text-md tracking-[0.15em] drop-shadow opacity-0 animate-fadeIn duration-1000 delay-2500">
-                    CHRISTIAN WU // 吳以仁
-                </h1>
+                <div className="opacity-0 animate-fadeIn duration-1000 delay-2500">
+                    <h1 className="font-semibold text-md md:text-lg lg:text-xl tracking-[0.15em] drop-shadow">
+                        CHRISTIAN WU // 吳以仁
+                    </h1>
+                </div>
                 <div className="h-2"></div>
-                <ul className="relative font-semibold text-5xl sm:text-7xl md:text-8xl lg:text-[7rem] tracking-tight drop-shadow-md">
+                <ul className="relative font-semibold text-7xl sm:text-[5.5rem] md:text-[7rem] lg:text-9xl tracking-tight drop-shadow-md">
                     <IntroLine delay="delay-1100">DREAM</IntroLine>
                     <IntroLine delay="delay-1300">THE</IntroLine>
                     <IntroLine delay="delay-1500">IMPOSSIBLE</IntroLine>

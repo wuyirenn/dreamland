@@ -21,7 +21,7 @@ const Contact = () => {
                 <div className="font-normal text-right text-sm sm:text-base tracking-[0.05em]">
                     If you want to create this world, <br className="md:hidden" />or simply say hello, find me at:
                     <br />
-                    <a href="mailto:wuyirenn@gmail.com" target="_blank" className="font-semibold">wuyirenn@gmail.com</a>
+                    <a href="mailto:wuyirenn@gmail.com" target="_blank" className="font-semibold">wuyirenn [at] gmail [dot] com</a>
                 </div>
             </div>
             </div>

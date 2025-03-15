@@ -1,39 +1,91 @@
-import React from "react";
+"use client"
+
+import React, { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 
 const Work = () => {
+    const [hoveredItem, setHoveredItem] = useState<string | null>(null);
+    const router = useRouter();
+
+    const items = [
+        { name: "Photography", image: "/assets/images/photography/DSCF6105.jpg", link: "/photography", 
+            description: "Shot on my trusty Fujifilm X-T3 and edited in Capture One." 
+        },
+        { name: "Composites", image: "/assets/images/composites/bumblebees.webp", link: "/composites",
+            description: "Trying to capture the wonder of nature. Made with Photoshop, my photography, and stock images."
+        },
+        { name: "Sketches", image: "", link: "/sketches",
+            description: "People on pen and paper, inspired by the late Jason Polan. Currently procrastinating on scanning them."
+        },
+        { name: "Library", image: "", link: "/library",
+            description: "Books, essays, and articles that I've found meaningful."
+        },
+        { name: "Projects", image: "", link: "/projects",
+            description: "Behind the scenes of apps and websites I've built. Coming soon."
+        },
+        { name: "Archives", image: "", link: "/archives",
+            description: "A personal history of architecture, art, film, and more. Many mishaps here. :D"
+        }
+    ]
+
+    useEffect(() => {
+        items.forEach(item => {
+            const img = new Image();
+            img.src = item.image;
+        });
+    }, []);
 
     return (
         <main className="relative">
-            <div className="text-white font-avantgarde drop-shadow-md">
-                <h1 className="font-semibold text-left text-sm sm:text-base tracking-[0.15em] drop-shadow">
+            <div className="w-[96vw] h-[70vh] md:h-[50vh] text-white font-avantgarde drop-shadow-md">
+                <div className="relative font-semibold text-left text-sm sm:text-base md:text-lg tracking-[0.15em] drop-shadow">
                     MY WORK
-                </h1>
+                </div>
                 <br></br>
-                <div className="grid gap-4 text-xs text-left font-medium">
-                    <div className="col-span-full">
-                        {`Real talk: I'm procrastinating the f*ck out of this particular project. I started earlier this summer, but life's been 
-                        busy, and I'm having trouble both finding inspiration and motivation. Please check back in soon! Promise it won't be long! <3`}
+                <div className="flex flex-col md:grid md:grid-cols-5 h-3/4">
+                    <div className="md:col-span-1">
+                        <ul className="">
+                            {items.map(item => (
+                                <li
+                                    key={item.name}
+                                    className="text-2xl lg:text-3xl xl:text-4xl font-semibold pb-0 md:pb-1 xl:pb-3"
+                                    onMouseEnter={() => setHoveredItem(item.name)}
+                                    onMouseLeave={() => setHoveredItem(null)}
+                                >
+                                    <a href={item.link} target="_blank" rel="noopener noreferrer">
+                                        {item.name}
+                                    </a>
+                                </li>
+                            ))}
+                        </ul>
                     </div>
-                    <div className="col-span-full">
-                        {`I am quite proud of the progress so far though. This site takes inspiration from Minh Pham and Fernando Pinto, and was designed 
-                        loosely with pen and paper, coded in VS Code, prototyped in Figma, and built with Next.js and Tailwind CSS.`}
-                    </div>
-                    <div className="col-span-full">   
-                        {`The shooting stars on the 'start' page are a combination of digital elements and a starry photo taken at Joshua Tree in April. 
-                        The background composite is one of many Photoshop composites I've made over the years (using Unsplash, Adobe Stock, and my own photos). 
-                        Inspired by the old Alto's Odyssey iPhone game, it embodies freedom and contains my appreciation for desert scenery. Lastly, the music 
-                        was composed by Tim @ Tabletop Audio. His music speaks for itself -- it's beautiful.`}
-                    </div>
-                    <div className="col-span-full">   
-                        {`Lately, I've been working on a few projects. I'm still processing photos from Taiwan, and been sketching as a creative outlet. I've
-                        also been exploring the intersection between knowledge graphs (Neo4j), IFC (ifcopenshell and topologicpy), and various graph/NLP/RAG
-                        techniques. It's been a blast becoming technical, and while this realm in particular is quite tough to crack, I enjoy the challenge.`}
+                    <br className="md:hidden" />
+                    <div className="flex flex-col h-full md:col-span-4 drop-shadow-md">
+                        <div className="relative left-1 h-full w-2/3 xl:w-[70%] outline outline-1 outline-white bg-white bg-opacity-20 md:ml-4 mb-4">
+                            {items.map(item => (
+                                <img
+                                    key={item.name}
+                                    src={item.image}
+                                    alt={item.name}
+                                    className={`absolute top-0 left-0 h-full w-full object-cover transition-opacity duration-500 ease-in-out ${hoveredItem === item.name ? 'opacity-100' : 'opacity-0'}`}
+                                />
+                            ))}
+                        </div>
+                        <div className="w-2/3 xl:w-[70%] md:ml-4 text-xs lg:text-sm font-medium">
+                            {items.map(item => (
+                                <div 
+                                    key={item.name}
+                                    className={`absolute transition-opacity duration-500 ease-in-out ${hoveredItem === item.name ? 'opacity-100' : 'opacity-0'}`}
+                                >
+                                    {item.description}
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>
         </main>
-    
-  )
+    );
 }
 
 export default Work

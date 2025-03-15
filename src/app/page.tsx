@@ -78,7 +78,7 @@ export default function Home() {
   // block 2: home page
   // + cursor
   return (
-    <main>
+    <main className="">
       <div className={`flex w-full h-[100vh] items-center justify-center select-none cursor-crosshair ${start ? 'hidden' : 'visible'}`}>
         <ShootingStars />
         <StarsBackground />
@@ -98,7 +98,7 @@ export default function Home() {
         </div>  
       </div>
       
-      <div className={`relative w-full h-[400vh] select-none cursor-crosshair ${start ? 'visible' : 'hidden'}`}>
+      <div className={`relative w-full h-[300vh] select-none overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none'] cursor-crosshair ${start ? 'visible' : 'hidden'}`}>
         <div className="fixed bg-odyssey bg-cover bg-center bg-no-repeat h-screen w-screen -z-[100] transition-opacity animate-fadeIn duration-700"></div>
         <div onMouseOver={()=>handleOver(46)} onMouseLeave={()=>handleLeave(22)}>
           <Navbar handleMusic={toggleMusic} isPlaying={isPlaying}/>
@@ -108,21 +108,21 @@ export default function Home() {
             <Intro />
           </div> 
         </div>
-        <div className="flex flex-col w-full min-h-[100vh] items-center justify-center">
+        <div id="about" className="flex flex-col w-full min-h-[100vh] items-center justify-center">
           <div className="max-w-xscard sm:max-w-smcard md:max-w-card my-12" onMouseOver={()=>handleOver(240)} onMouseLeave={()=>handleLeave(22)}>
             <AboutMe />
           </div> 
         </div>
         <div id="work" className="flex flex-col w-full min-h-[100vh] items-center justify-center">
-          <div className="max-w-xscard sm:max-w-smcard md:max-w-card my-12" onMouseOver={()=>handleOver(240)} onMouseLeave={()=>handleLeave(22)}>
+          <div className="max-w-xscard sm:max-w-smcard md:max-w-card my-12 overflow-x-hidden" onMouseOver={()=>handleOver(240)} onMouseLeave={()=>handleLeave(22)}>
             <Work />
           </div> 
         </div>
-        <div id="contact" className="flex flex-col w-full min-h-[100vh] items-center justify-center">
+        {/* <div id="contact" className="flex flex-col w-full min-h-[100vh] items-center justify-center">
           <div className="max-w-xscard sm:max-w-smcard md:max-w-card my-12" onMouseOver={()=>handleOver(240)} onMouseLeave={()=>handleLeave(22)}>
             <Contact />
           </div> 
-        </div>
+        </div> */}
       </div>
 
       <Cursor isActive={isActive} radius={radius}/>

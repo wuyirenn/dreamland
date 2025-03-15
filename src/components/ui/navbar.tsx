@@ -76,9 +76,9 @@ const Navbar: React.FC<NavbarProps> = ({ handleMusic, isPlaying }) => {
             </div>
             <div className="fixed top-[-.25rem] right-0 m-nav drop-shadow"> 
                 <ul>
-                    <NavItem to="/" delay="delay-600">ABOUT</NavItem>
-                    <NavItem to="work" delay="delay-700">WORK</NavItem>
-                    <NavItem to="contact" delay="delay-800">CONTACT</NavItem>
+                    <NavItem to="/" delay="delay-600">HOME</NavItem>
+                    <NavItem to="about" delay="delay-700">ABOUT</NavItem>
+                    <NavItem to="work" delay="delay-800">WORK</NavItem>
                 </ul>
             </div>
             <div className="fixed bottom-0 left-0 m-nav drop-shadow">
