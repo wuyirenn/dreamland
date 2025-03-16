@@ -16,7 +16,7 @@ interface ImageData {
   id: number;
 }
 
-const GalleryPage = () => {
+const CompositesPage = () => {
     const [selectedImage, setSelectedImage] = useState<ImageData | null>(null);
     const [isActive, setIsActive] = useState(false);
     const [radius, setRadius] = useState(20);
@@ -138,4 +138,4 @@ const GalleryPage = () => {
     );
 };
 
-export default GalleryPage;
+export default CompositesPage;
