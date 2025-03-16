@@ -170,7 +170,7 @@ function HomeContent() {
 // Main component with Suspense boundary
 export default function Home() {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<div className="w-screen h-screen bg-white transition-all duration-1000"></div>}>
       <HomeContent />
     </Suspense>
   );
