@@ -31,8 +31,8 @@ const ComingSoonPage = () => {
                     onMouseOver={() => handleOver(46)}
                     onMouseLeave={() => handleLeave(22)}
                 >
-                    <div className="text-sm lg:text-base">Coming soon. Yes, I'm procrastinating. Stay tuned!</div>
-                    <div className="text-xs lg:text-sm font-normal">P.S. Check out my photography and composites while you wait.</div>
+                    <div className="text-sm lg:text-base">{`Coming soon. Yes, I'm procrastinating. Stay tuned!`}</div>
+                    <div className="text-xs lg:text-sm font-normal">{`P.S. Check out my photography and composites while you wait.`}</div>
                 </div>
             </div>
             
