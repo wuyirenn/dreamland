@@ -34,8 +34,8 @@ const LightboxModal: React.FC<LightboxModalProps> = ({ image, onClose, onCursorO
         <div className={`fixed flex inset-0 justify-center items-center backdrop-blur-md backdrop-brightness-75 drop-shadow-md z-50 transition-opacity duration-500 ease-in-out 
             ${isVisible ? 'opacity-100' : 'opacity-0'}`} onClick={handleClose}>
             <div 
-                className="bg-transparent w-10/12" 
-                onClick={(e) => e.stopPropagation()}
+                className="flex flex-col" 
+                onClick={handleClose}
                 onMouseOver={()=>onCursorOver(46)} 
                 onMouseLeave={()=>onCursorLeave(22)}
             >
@@ -45,11 +45,11 @@ const LightboxModal: React.FC<LightboxModalProps> = ({ image, onClose, onCursorO
                 >
                     <AiOutlineClose size={24} className="hover:size-7 duration-100 ease-out text-white"/>
                 </button>
-                <img src={image.src} alt={image.description} className="w-full h-auto mb-2 outline outline-white"/>
+                <img src={image.src} alt={image.description} className="max-w-[85vw] max-h-[85vh] m-1 outline outline-white object-scale-down"/>
                 <div className="flex bottom-0 justify-between text-white font-medium">
                     <div className="relative bottom-0 left-0">{image.description}</div>
                     <div className="relative bottom-0 right-0 text-right">
-                        {image.location} ({image.year})
+                        {image.location}{(image.year !== 0) ? ` (${image.year})` : ''}
                     </div>
                 </div>
             </div>

@@ -13,6 +13,7 @@
     "clsx": "^2.1.1",
     "framer-motion": "^11.0.10",
     "gsap": "^3.12.5",
+    "layout": "^2.2.0",
     "lucide-react": "^0.394.0",
     "next": "^14.2.13",
     "react": "^18",

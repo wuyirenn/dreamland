@@ -14,14 +14,24 @@ interface NavItemProps {
     to: string,
     delay: string,
     children: React.ReactNode,
+    pathname: string,
 };
 
-const NavItem: React.FC<NavItemProps> = ({ to, delay, children }) => {
+const NavItem: React.FC<NavItemProps> = ({ to, delay, children, pathname }) => {
+    // Check if we're on the home page
+    const isHomePage = pathname === "/";
+    
+    // If on home page, use Link for smooth scrolling
+    // If not on home page, use Next.js navigation to home page with section hash
     return (
         <div className={`opacity-0 animate-fadeIn duration-700 ${delay} 
         text-right font-nunitosans font-bold tracking-wide text-sm hover:text-base 
         py-[0.25rem] pointer-events-auto transition-transform duration-300 ease-in-out`}>
-            <Link href="#" to={to} spy={true} smooth={true} duration={500}>{children}</Link>
+            {isHomePage ? (
+                <Link href="#" to={to} spy={true} smooth={true} duration={500}>{children}</Link>
+            ) : (
+                <a href={`/?skipIntro=true${to !== "/" ? `#${to}` : ""}`}>{children}</a>
+            )}
         </div>
     );
 };
@@ -78,9 +88,9 @@ const Navbar: React.FC<NavbarProps> = ({ handleMusic, isPlaying }) => {
             </div>
             <div className="fixed top-[-.25rem] right-0 m-nav drop-shadow-md"> 
                 <ul>
-                    <NavItem to="/" delay="delay-600">HOME</NavItem>
-                    <NavItem to="about" delay="delay-700">ABOUT</NavItem>
-                    <NavItem to="work" delay="delay-800">WORK</NavItem>
+                    <NavItem to="/" delay="delay-600" pathname={pathname}>HOME</NavItem>
+                    <NavItem to="about" delay="delay-700" pathname={pathname}>ABOUT</NavItem>
+                    <NavItem to="work" delay="delay-800" pathname={pathname}>WORK</NavItem>
                 </ul>
             </div>
             <div className="fixed bottom-0 left-0 m-nav drop-shadow-md">
