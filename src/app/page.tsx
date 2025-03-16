@@ -95,11 +95,13 @@ function HomeContent() {
         <ShootingStars />
         <StarsBackground />
         <div className="flex flex-col items-center z-50">
-          <div className="opacity-0 animate-fadeIn delay-500 duration-1000" onClick={musicStart}>
+          <div className="opacity-0 animate-fadeIn delay-500 duration-1000" onClick={musicStart} onMouseOver={() => handleOver(240)} onMouseLeave={() => handleLeave(22)}  >
             <Button>START</Button>
           </div>
           <a className="fixed bottom-20 underline text-white font-nunitosans opacity-0 animate-fadeIn delay-1000 duration-1000" 
             onClick={skipAudio} 
+            onMouseOver={() => handleOver(46)} 
+            onMouseLeave={() => handleLeave(22)}
             href="#">
             enter without audio
           </a>
