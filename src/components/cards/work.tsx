@@ -16,16 +16,16 @@ const Work = () => {
         { name: "Composites", image: "/assets/images/composites/bumblebees.jpg", link: "/composites",
             description: "Trying to capture the wonder of nature. Made with Photoshop, my photography, and stock images."
         },
-        { name: "Sketches", image: "", link: "/sketches",
+        { name: "Sketches", image: "", link: "/coming-soon",
             description: "People on pen and paper, inspired by the late Jason Polan. Currently procrastinating on scanning them."
         },
-        { name: "Library", image: "", link: "/library",
+        { name: "Library", image: "", link: "/coming-soon",
             description: "Books, essays, and articles that I've found meaningful."
         },
-        { name: "Projects", image: "", link: "/projects",
+        { name: "Projects", image: "", link: "/coming-soon",
             description: "Behind the scenes of apps and websites I've built. Coming soon."
         },
-        { name: "Archives", image: "", link: "/archives",
+        { name: "Archives", image: "", link: "/coming-soon",
             description: "A personal history of architecture, art, film, and more. Many mishaps here. :D"
         }
     ], []);
@@ -74,7 +74,7 @@ const Work = () => {
                     </div>
                     <br className="md:hidden" />
                     <div className="flex flex-col h-full md:col-span-4 drop-shadow-md">
-                        <div className="relative left-1 h-full w-2/3 xl:w-[70%] outline outline-1 outline-white bg-white bg-opacity-20 md:ml-4 mb-4">
+                        <div className="relative left-1 h-full w-2/3 xl:w-[70%] outline outline-1 outline-white bg-white bg-opacity-20 md:ml-4 mb-2">
                             {items.map(item => item.image && (
                                 <div
                                     key={item.name}
