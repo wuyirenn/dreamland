@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState, useEffect, useRef, useMemo, useCallback } from "react";
+import React, { useState, useEffect, useRef, useMemo, useCallback, Suspense } from "react";
 import Navbar from "@/components/ui/navbar";
 import Intro from "@/components/cards/intro";
 import AboutMe from "@/components/cards/about-me";
@@ -11,7 +11,8 @@ import ShootingStars from "@/components/ui/shooting-stars";
 import StarsBackground from "@/components/ui/stars-background";
 import { useSearchParams } from "next/navigation";
 
-export default function Home() {
+// Create a separate component that uses useSearchParams
+function HomeContent() {
   const searchParams = useSearchParams();
   const skipIntro = searchParams.get('skipIntro') === 'true';
 
@@ -160,5 +161,14 @@ export default function Home() {
       {mainContent}
       {cursorElement}
     </main>
+  );
+}
+
+// Main component with Suspense boundary
+export default function Home() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <HomeContent />
+    </Suspense>
   );
 }
