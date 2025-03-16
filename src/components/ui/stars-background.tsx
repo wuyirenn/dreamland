@@ -20,7 +20,7 @@ interface StarBackgroundProps {
 }
  
 const StarsBackground: React.FC<StarBackgroundProps> = ({
-  starDensity = 0.00025,
+  starDensity = 0.0003,
   allStarsTwinkle = true,
   twinkleProbability = 0.6,
   minTwinkleSpeed = 0.4,
@@ -40,7 +40,7 @@ const StarsBackground: React.FC<StarBackgroundProps> = ({
           x: Math.random() * width,
           y: Math.random() * height,
           radius: Math.random() * 0.2 + 0.7,
-          opacity: Math.random() * 0.2 + 0.8,
+          opacity: Math.random() * 0.4 + 0.6,
           twinkleSpeed: shouldTwinkle
             ? minTwinkleSpeed +
               Math.random() * (maxTwinkleSpeed - minTwinkleSpeed)
@@ -100,8 +100,8 @@ const StarsBackground: React.FC<StarBackgroundProps> = ({
  
         if (star.twinkleSpeed !== null) {
           star.opacity =
-            0.25 +
-            Math.abs(Math.sin((Date.now() * 0.001) / star.twinkleSpeed) * 0.5);
+            0.3 +
+            Math.abs(Math.sin((Date.now() * 0.001) / star.twinkleSpeed) * 0.7);
         }
       });
  
@@ -118,9 +118,9 @@ const StarsBackground: React.FC<StarBackgroundProps> = ({
   return (
     <canvas
       ref={canvasRef}
-      className="h-screen w-screen absolute inset-0 transition-opacity animate-fadeIn duration-1000"
+      className="h-screen w-screen absolute inset-0 transition-opacity animate-fadeIn duration-1000 z-50"
       style={{
-        filter: "contrast(2)"
+        filter: "contrast(2.5) brightness(1.8)"
       }}
     />
   );

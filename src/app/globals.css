@@ -7,7 +7,7 @@
     @apply border-border scrollbar-hide;
   }
   body {
-    @apply bg-black scrollbar-hide overflow-auto;
+    @apply bg-white scrollbar-hide overflow-auto;
   }
 }
 

@@ -27,7 +27,7 @@ const config = {
 
       backgroundImage: {
         "odyssey": "url('/assets/images/composites/alto-odyssey.jpg')",
-        "stars": "url('/assets/images/other/stars.jpg')",
+        "stars": "url('/assets/images/other/stars.webp')",
       },
 
       fontFamily: {

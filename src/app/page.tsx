@@ -91,14 +91,15 @@ function HomeContent() {
     if (start) return null; // Don't render at all if not needed
     
     return (
-      <div className="flex w-full h-[100vh] items-center justify-center select-none transition-opacity duration-1000 ease-in-out opacity-100">
+      <div className="fixed top-0 left-0 w-full h-[100vh] flex items-center justify-center select-none">
+        <div className="fixed top-0 left-0 w-full h-[100vh] bg-stars bg-cover bg-center bg-no-repeat -z-[100]"></div>
         <ShootingStars />
         <StarsBackground />
         <div className="flex flex-col items-center z-50">
-          <div className="opacity-0 animate-fadeIn delay-500 duration-1000" onClick={musicStart} onMouseOver={() => handleOver(240)} onMouseLeave={() => handleLeave(22)}  >
+          <div className="opacity-0 animate-fadeIn animation-delay-500 animation-duration-1000" onClick={musicStart} onMouseOver={() => handleOver(240)} onMouseLeave={() => handleLeave(22)}>
             <Button>START</Button>
           </div>
-          <a className="fixed bottom-20 underline text-white font-nunitosans opacity-0 animate-fadeIn delay-1000 duration-1000" 
+          <a className="fixed bottom-20 underline text-white font-nunitosans opacity-0 animate-fadeIn animation-delay-1000 animation-duration-1000" 
             onClick={skipAudio} 
             onMouseOver={() => handleOver(46)} 
             onMouseLeave={() => handleLeave(22)}
@@ -108,7 +109,7 @@ function HomeContent() {
         </div>  
       </div>
     );
-  }, [start, musicStart, skipAudio]);
+  }, [start, musicStart, skipAudio, handleOver, handleLeave]);
 
   // Memoize the navbar to prevent unnecessary re-renders
   const navbar = useMemo(() => (
@@ -149,8 +150,8 @@ function HomeContent() {
     if (!start) return null; // Don't render at all if not needed
     
     return (
-      <div className="absolute top-0 left-0 right-0 w-full h-[300vh] select-none overflow-y-auto transition-opacity duration-1000 ease-in-out opacity-0 animate-fadeIn">
-        <div className="fixed bg-odyssey bg-cover bg-center bg-no-repeat h-screen w-screen -z-[100] transition-opacity animate-fadeIn duration-700"></div>
+      <div className="absolute top-0 left-0 right-0 w-full h-[300vh] select-none overflow-y-auto opacity-0 animate-fadeIn">
+        <div className="fixed bg-odyssey bg-cover bg-center bg-no-repeat h-screen w-screen -z-[100] animate-fadeIn"></div>
         {navbar}
         {contentSections}
       </div>

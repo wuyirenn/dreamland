@@ -127,7 +127,6 @@ const PhotographyPage = () => {
 
     return (
         <div className="min-h-screen overflow-hidden z-[250]">
-            <div className="fixed bg-white h-screen w-screen -z-[100]"></div>
             <div onMouseOver={()=>handleOver(46)} onMouseLeave={()=>handleLeave(22)}>
                 <Navbar handleMusic={() => {}} isPlaying={false} />
             </div>
