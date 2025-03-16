@@ -26,8 +26,8 @@ const Cursor = ({ isActive, radius }) => {
         
         if (Math.abs(dx) > 0.1 || Math.abs(dy) > 0.1) {
             delayedMouse.current = {
-                x: lerp(delayedMouse.current.x, mouse.current.x, 0.1),
-                y: lerp(delayedMouse.current.y, mouse.current.y, 0.1)
+                x: lerp(delayedMouse.current.x, mouse.current.x, 0.05),
+                y: lerp(delayedMouse.current.y, mouse.current.y, 0.05)
             };
             
             if (circle.current) {
