@@ -19,7 +19,7 @@ const Work = () => {
         { name: "Sketches", image: "", link: "/coming-soon",
             description: "People on pen and paper, inspired by the late Jason Polan. Currently procrastinating on scanning them."
         },
-        { name: "Library", image: "", link: "/library",
+        { name: "Library", image: "/assets/images/other/library.png", link: "/library",
             description: "Books, essays, and articles that I've found meaningful."
         },
         { name: "Projects", image: "", link: "/coming-soon",
