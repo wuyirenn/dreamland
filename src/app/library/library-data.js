@@ -21,8 +21,12 @@ const libraryData = [
                 title: "When California Makes You Sad",
                 author: "Michelle Jia",
                 favorite: false
+            },
+            {
+                title: "Status as a Service (StaaS)",
+                author: "Eugene Wei",
+                favorite: false
             }
-            
         ]
     },
     {
@@ -57,7 +61,12 @@ const libraryData = [
                 title: "The Giver",
                 author: "Lois Lowry",
                 favorite: true
-            }
+            },
+            {
+                title: "All About Love",
+                author: "Bell Hooks",
+                favorite: false
+            },
         ]
     },
     {
@@ -88,6 +97,22 @@ const libraryData = [
                 author: "Douglas Adams",
                 favorite: false
             },
+            {
+                title: "Brave New World",
+                author: "Aldous Huxley",
+                favorite: true
+            },
+            {
+                title: "Thinking, Fast and Slow",
+                author: "Daniel Kahneman",
+                favorite: false
+            },
+            {
+                title: "Sapiens: A Brief History of Humankind",
+                author: "Yuval Noah Harari",
+                favorite: false
+            },
+            
         ]
     },
 ]
