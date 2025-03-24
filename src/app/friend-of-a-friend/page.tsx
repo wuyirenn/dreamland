@@ -46,7 +46,7 @@ const TermsAndPrivacyPage = () => {
                     </div>
 
                     {/* Terms and Conditions Section */}
-                    <div>
+                    <div className="mb-16">
                         <h1 className="text-xl sm:text-2xl md:text-3xl text-stone-600/95 font-bold mb-6">Terms and Conditions</h1>
                         <div className="text-xs sm:text-sm md:text-base text-stone-500 space-y-4">
                             <p>{`1. Our app allows users to connect with friends of friends based on location. You may only use the Service for lawful, personal, and non-commercial purposes.`}</p>
@@ -55,6 +55,15 @@ const TermsAndPrivacyPage = () => {
                             <p>{`4. The Service is provided "as is" and "as available" without warranties of any kind. We are not liable for any direct, indirect, incidental, or consequential damages arising from your use of the Service.`}</p>
                             <p>{`5. We reserve the right to suspend or terminate your access to the Service at our sole discretion, without notice, if you violate these Terms.`}</p>
                             <p>{`6. For any questions regarding these Terms, please contact us at wuyirenn@gmail.com.`}</p>
+                        </div>
+                    </div>
+
+                    {/* About Section */}
+                    <div>
+                        <h1 className="text-xl sm:text-2xl md:text-3xl text-stone-600/95 font-bold mb-6">About Friend of a Friend</h1>
+                        <div className="text-xs sm:text-sm md:text-base text-stone-500 space-y-4">
+                            <p>{`1. Friend of a Friend is a social app that connects you with friends of friends based on your location. It is currently in development and not available for download -- please check back soon. Feel free to reach out if you'd like to be notified and join the waitlist.`}</p>
+                            <p>{`2. Friend of a Friend is currently operating at 2640 Hyde St. San Francisco, CA 94109. Please direct any inquiries to this address.`}</p>
                         </div>
                     </div>
                 </div>

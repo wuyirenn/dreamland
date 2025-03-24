@@ -25,6 +25,9 @@ const Work = () => {
         { name: "Projects", image: "", link: "/coming-soon",
             description: "Behind the scenes of apps and websites I've built. Coming soon."
         },
+        { name: "FOAF", image: "", link: "/friend-of-a-friend",
+            description: "An (in-progress) social app that connects you with friends of friends based on your location."
+        },
         { name: "Archives", image: "", link: "/coming-soon",
             description: "A personal history of architecture, art, film, and more. Many mishaps here. :D"
         }
