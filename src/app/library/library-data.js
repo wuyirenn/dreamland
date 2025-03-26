@@ -45,7 +45,7 @@ const libraryData = [
             {
                 title: "嫌疑人X的献身",
                 author: "Higashino Keigo",
-                favorite: true
+                favorite: false
             },
             {
                 title: "惡意",
@@ -75,7 +75,7 @@ const libraryData = [
             {
                 title: "Creativity, Inc.",
                 author: "Ed Catmull and Amy Wallace",
-                favorite: true
+                favorite: false
             },
             {
                 title: "The Hard Thing About Hard Things",
@@ -98,9 +98,14 @@ const libraryData = [
                 favorite: false
             },
             {
+                title: "Unreasonable Hospitality",
+                author: "Will Guidara",
+                favorite: true
+            },
+            {
                 title: "Brave New World",
                 author: "Aldous Huxley",
-                favorite: true
+                favorite: false
             },
             {
                 title: "Thinking, Fast and Slow",
@@ -111,8 +116,7 @@ const libraryData = [
                 title: "Sapiens: A Brief History of Humankind",
                 author: "Yuval Noah Harari",
                 favorite: false
-            },
-            
+            }
         ]
     },
 ]
