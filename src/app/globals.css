@@ -11,11 +11,4 @@
   }
 }
 
-@layer components {
-  .mask {
-    mask-image: url('../../public/assets/mask.svg');
-    mask-repeat: no-repeat;
-    mask-position: center;
-    color: black;
-  }
-}
+@layer components {}

@@ -51,13 +51,13 @@ const config = {
       width: {
         "card": "calc(100% - 22vw)",
         "smcard": "calc(100% - 26vw)",
-        "xscard": "calc(100% - 28vw)"
+        "xscard": "calc(100% - 30vw)"
       },
 
       maxWidth: {
         "card": "calc(100% - 22vw)",
         "smcard": "calc(100% - 26vw)",
-        "xscard": "calc(100% - 28vw)"
+        "xscard": "calc(100% - 32vw)"
       },
 
       maxHeight: {

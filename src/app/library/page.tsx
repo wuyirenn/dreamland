@@ -26,10 +26,11 @@ const LibraryPage = () => {
                 <Navbar handleMusic={() => {}} isPlaying={false} />
             </div>
             
-            <div className="flex flex-col items-center justify-center h-screen">
+            <div className="flex flex-col items-center justify-center">
                 <div 
-                    className="text-left p-8 h-full w-xscard sm:w-smcard md:w-card my-36"
+                    className="text-left p-8 w-xscard sm:w-smcard md:w-card my-36"
                 >
+                    <div className="text-4xl font-bold text-stone-500 mb-8">Library</div>
                     <div 
                         className="text-xs lg:text-sm font-medium text-stone-500 mb-8"
                         onMouseOver={() => handleOver(46)}

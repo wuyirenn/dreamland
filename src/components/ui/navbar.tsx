@@ -25,7 +25,7 @@ const NavItem: React.FC<NavItemProps> = ({ to, delay, children, pathname }) => {
     // If not on home page, use Next.js navigation to home page with section hash
     return (
         <div className={`opacity-0 animate-fadeIn duration-700 ${delay} 
-        text-right font-nunitosans font-bold tracking-wide text-sm hover:text-base 
+        text-right font-nunitosans font-bold tracking-wide text-xs md:text-sm hover:text-base 
         py-[0.25rem] pointer-events-auto transition-transform duration-300 ease-in-out`}>
             {isHomePage ? (
                 <Link href="#" to={to} spy={true} smooth={true} duration={500}>{children}</Link>
