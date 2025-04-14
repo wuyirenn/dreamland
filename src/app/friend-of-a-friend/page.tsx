@@ -33,11 +33,14 @@ const TermsAndPrivacyPage = () => {
                 >
                     {/* About Section */}
                     <div className="mb-16">
-                        <div className="text-2xl sm:text-3xl md:text-4xl text-stone-600 font-bold mb-10">Friend of a Friend App</div>
+                        <div className="mb-10">
+                            <div className="text-2xl sm:text-3xl md:text-4xl text-stone-600 font-bold">Friend of a Friend App</div>
+                            <div className="text-xs sm:text-sm md:text-base text-stone-500 space-y-4">by Christian Y Wu</div>
+                        </div>
                         <h1 className="text-xl sm:text-2xl md:text-3xl text-stone-600/95 font-bold mb-6">About Friend of a Friend</h1>
                         <div className="text-xs sm:text-sm md:text-base text-stone-500 space-y-4">
                             <p>{`1. Friend of a Friend is a social app that connects you with friends of friends based on your location.`}</p>
-                            <p>{`2. Friend of a Friend is currently operating at 2640 Hyde St. San Francisco, CA 94109. Please direct any inquiries to this address or contact us at wuyirenn@gmail.com.`}</p>
+                            <p>{`2. Friend of a Friend is currently operating at 2640 Hyde St. San Francisco, CA 94109. Please direct any inquiries to this address, or contact us at wuyirenn@gmail.com.`}</p>
                         </div>
                     </div>
 
