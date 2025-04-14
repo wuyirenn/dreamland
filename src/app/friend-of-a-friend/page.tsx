@@ -36,8 +36,8 @@ const TermsAndPrivacyPage = () => {
                         <div className="text-2xl sm:text-3xl md:text-4xl text-stone-600 font-bold mb-10">Friend of a Friend App</div>
                         <h1 className="text-xl sm:text-2xl md:text-3xl text-stone-600/95 font-bold mb-6">About Friend of a Friend</h1>
                         <div className="text-xs sm:text-sm md:text-base text-stone-500 space-y-4">
-                            <p>{`1. Friend of a Friend is a social app that connects you with friends of friends based on your location. It is currently in development and not available for download -- please check back soon. Feel free to reach out if you'd like to be notified and join the waitlist.`}</p>
-                            <p>{`2. Friend of a Friend is currently operating at 2640 Hyde St. San Francisco, CA 94109. Please direct any inquiries to this address.`}</p>
+                            <p>{`1. Friend of a Friend is a social app that connects you with friends of friends based on your location.`}</p>
+                            <p>{`2. Friend of a Friend is currently operating at 2640 Hyde St. San Francisco, CA 94109. Please direct any inquiries to this address or contact us at wuyirenn@gmail.com.`}</p>
                         </div>
                     </div>
 
