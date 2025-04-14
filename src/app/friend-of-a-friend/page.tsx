@@ -31,10 +31,19 @@ const TermsAndPrivacyPage = () => {
                     onMouseOver={() => handleOver(46)}
                     onMouseLeave={() => handleLeave(22)}
                 >
-                    {/* Privacy Policy Section */}
+                    {/* About Section */}
                     <div className="mb-16">
                         <div className="text-2xl sm:text-3xl md:text-4xl text-stone-600 font-bold mb-10">Friend of a Friend App</div>
-                        <h1 className="text-xl sm:text-2xl md:text-3xl text-stone-600/95 font-bold mb-6">Privacy Policy</h1>
+                        <h1 className="text-xl sm:text-2xl md:text-3xl text-stone-600/95 font-bold mb-6">About Friend of a Friend</h1>
+                        <div className="text-xs sm:text-sm md:text-base text-stone-500 space-y-4">
+                            <p>{`1. Friend of a Friend is a social app that connects you with friends of friends based on your location. It is currently in development and not available for download -- please check back soon. Feel free to reach out if you'd like to be notified and join the waitlist.`}</p>
+                            <p>{`2. Friend of a Friend is currently operating at 2640 Hyde St. San Francisco, CA 94109. Please direct any inquiries to this address.`}</p>
+                        </div>
+                    </div>
+
+                    {/* Privacy Policy Section */}
+                    <div className="mb-16">
+                    <h1 className="text-xl sm:text-2xl md:text-3xl text-stone-600/95 font-bold mb-6">Privacy Policy</h1>
                         <div className="text-xs sm:text-sm md:text-base text-stone-500 space-y-4">
                             <p>Last updated: {new Date().toLocaleDateString()}</p>
                             <p>{`1. Our app connects you with friends of friends based on your location, enhancing your social discovery experience. When you opt in, Friend of a Friend collects your phone number, name, and location.`}</p>
@@ -43,11 +52,12 @@ const TermsAndPrivacyPage = () => {
                             <p>{`4. By accessing or using the service, you agree to be bound by these Terms.`}</p>
                             <p>{`5. If you have any questions or concerns, or would like to opt-out, please contact us at wuyirenn@gmail.com. We respect your privacy and data and will delete your data completely upon request.`}</p>
                         </div>
+                        
                     </div>
 
-                    {/* Terms and Conditions Section */}
-                    <div className="mb-16">
-                        <h1 className="text-xl sm:text-2xl md:text-3xl text-stone-600/95 font-bold mb-6">Terms and Conditions</h1>
+                    {/* Terms & Conditions Section */}
+                    <div>
+                    <h1 className="text-xl sm:text-2xl md:text-3xl text-stone-600/95 font-bold mb-6">Terms and Conditions</h1>
                         <div className="text-xs sm:text-sm md:text-base text-stone-500 space-y-4">
                             <p>{`1. Our app allows users to connect with friends of friends based on location. You may only use the Service for lawful, personal, and non-commercial purposes.`}</p>
                             <p>{`2. You agree NOT to: Reverse engineer, decompile, disassemble, or otherwise attempt to derive the source code or underlying structure of the Service; Copy, distribute, modify, or create derivative works based on the Service without prior written consent; Interfere with or disrupt the operation of the Service or its servers; Use the Service for any unlawful, harmful, or fraudulent activity.`}</p>
@@ -55,15 +65,6 @@ const TermsAndPrivacyPage = () => {
                             <p>{`4. The Service is provided "as is" and "as available" without warranties of any kind. We are not liable for any direct, indirect, incidental, or consequential damages arising from your use of the Service.`}</p>
                             <p>{`5. We reserve the right to suspend or terminate your access to the Service at our sole discretion, without notice, if you violate these Terms.`}</p>
                             <p>{`6. For any questions regarding these Terms, please contact us at wuyirenn@gmail.com.`}</p>
-                        </div>
-                    </div>
-
-                    {/* About Section */}
-                    <div>
-                        <h1 className="text-xl sm:text-2xl md:text-3xl text-stone-600/95 font-bold mb-6">About Friend of a Friend</h1>
-                        <div className="text-xs sm:text-sm md:text-base text-stone-500 space-y-4">
-                            <p>{`1. Friend of a Friend is a social app that connects you with friends of friends based on your location. It is currently in development and not available for download -- please check back soon. Feel free to reach out if you'd like to be notified and join the waitlist.`}</p>
-                            <p>{`2. Friend of a Friend is currently operating at 2640 Hyde St. San Francisco, CA 94109. Please direct any inquiries to this address.`}</p>
                         </div>
                     </div>
                 </div>

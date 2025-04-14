@@ -11,7 +11,6 @@ import ShootingStars from "@/components/ui/shooting-stars";
 import StarsBackground from "@/components/ui/stars-background";
 import { useSearchParams } from "next/navigation";
 
-// Create a separate component that uses useSearchParams
 function HomeContent() {
   const searchParams = useSearchParams();
   const skipIntro = searchParams.get('skipIntro') === 'true';
@@ -22,9 +21,7 @@ function HomeContent() {
   const [isPlaying, setPlaying] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   
-  // Initialize audio only once with lazy loading
   useEffect(() => {
-    // Only create the audio element when needed
     if (isPlaying && !audioRef.current) {
       audioRef.current = new Audio("/assets/music/birdsong.mp3");
       audioRef.current.loop = true;
@@ -39,7 +36,6 @@ function HomeContent() {
     };
   }, [isPlaying]);
 
-  // Handle audio playback
   useEffect(() => {
     const audio = audioRef.current;
     if (!audio) return;
@@ -56,7 +52,6 @@ function HomeContent() {
     }
   }, [isPlaying]);
 
-  // Memoize event handlers
   const handleOver = useCallback((n: number) => {
     setIsActive(true);
     setRadius(n);
@@ -80,15 +75,13 @@ function HomeContent() {
     setStart(true);
   }, []);
 
-  // Memoize components that don't need to re-render often
   const cursorElement = useMemo(() => 
     <Cursor isActive={isActive} radius={radius} />, 
     [isActive, radius]
   );
 
-  // Optimize intro screen rendering
   const introScreen = useMemo(() => {
-    if (start) return null; // Don't render at all if not needed
+    if (start) return null;
     
     return (
       <div className="fixed top-0 left-0 w-full h-[100vh] flex items-center justify-center select-none">
@@ -111,14 +104,12 @@ function HomeContent() {
     );
   }, [start, musicStart, skipAudio, handleOver, handleLeave]);
 
-  // Memoize the navbar to prevent unnecessary re-renders
   const navbar = useMemo(() => (
     <div onMouseOver={() => handleOver(46)} onMouseLeave={() => handleLeave(22)}>
       <Navbar handleMusic={toggleMusic} isPlaying={isPlaying}/>
     </div>
   ), [handleOver, handleLeave, toggleMusic, isPlaying]);
 
-  // Memoize content sections
   const contentSections = useMemo(() => (
     <>
       <div id="/" className="flex flex-col w-full min-h-[100vh] items-center justify-center">
@@ -145,13 +136,12 @@ function HomeContent() {
     </>
   ), [handleOver, handleLeave]);
 
-  // Optimize main content rendering
   const mainContent = useMemo(() => {
-    if (!start) return null; // Don't render at all if not needed
+    if (!start) return null;
     
     return (
       <div className="absolute top-0 left-0 right-0 w-full h-[300vh] select-none overflow-y-auto opacity-0 animate-fadeIn">
-        <div className="fixed bg-odyssey bg-cover bg-center bg-no-repeat h-screen w-screen -z-[100] animate-fadeIn"></div>
+        <div className="fixed bg-odyssey bg-cover bg-center bg-no-repeat h-screen w-screen -z-[100]"></div>
         {navbar}
         {contentSections}
       </div>
@@ -167,7 +157,6 @@ function HomeContent() {
   );
 }
 
-// Main component with Suspense boundary
 export default function Home() {
   return (
     <Suspense fallback={<div className="w-screen h-screen bg-white transition-all duration-1000"></div>}>
