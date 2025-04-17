@@ -13,19 +13,16 @@ const Work = () => {
         { name: "Photography", image: "/assets/images/photography/DSCF6105.jpg", link: "/work/photography", 
             description: "Shot on my trusty Fujifilm X-T3 and edited in Capture One." 
         },
-        { name: "Composites", image: "/assets/images/composites/bumblebees.jpg", link: "/composites",
+        { name: "Composites", image: "/assets/images/composites/bumblebees.jpg", link: "/work/composites",
             description: "Trying to capture the wonder of nature. Made with Photoshop, my photography, and stock images."
         },
         { name: "Sketches", image: "", link: "/coming-soon",
             description: "People on pen and paper, inspired by the late Jason Polan. Currently procrastinating on scanning them."
         },
-        { name: "Library", image: "/assets/images/other/library.png", link: "/library",
-            description: "Books, essays, and articles that I've found meaningful."
-        },
         { name: "Projects", image: "", link: "/coming-soon",
             description: "Behind the scenes of apps and websites I've built. Coming soon."
         },
-        { name: "FOAF", image: "", link: "/friend-of-a-friend",
+        { name: "FOAF", image: "", link: "/work/friend-of-a-friend",
             description: "An (in-progress) social app that connects you with friends of friends based on your location."
         },
         { name: "Archives", image: "", link: "/coming-soon",

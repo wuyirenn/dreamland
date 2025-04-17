@@ -1,8 +1,8 @@
 "use client"
 
 import React, { useState, useCallback } from 'react';
-import Navbar from '../../components/ui/navbar';
-import Cursor from '../../components/ui/cursor';
+import Navbar from '../../../components/ui/navbar';
+import Cursor from '../../../components/ui/cursor';
 
 const ComingSoonPage = () => {
     const [isActive, setIsActive] = useState(false);
