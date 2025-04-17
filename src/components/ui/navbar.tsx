@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import { Link } from "react-scroll";
 import { usePathname } from "next/navigation";
 import { IconContext } from "react-icons";
@@ -9,7 +10,6 @@ import { FaPenNib, FaWaveSquare } from "react-icons/fa6";
 import IconToggle from "./icon-toggle";
 
 
-// subcomponent : individual navigation item
 interface NavItemProps {
     to: string,
     delay: string,
@@ -18,9 +18,15 @@ interface NavItemProps {
 };
 
 const NavItem: React.FC<NavItemProps> = ({ to, delay, children, pathname }) => {
-    // Check if we're on the home page
     const isHomePage = pathname === "/";
-    
+    const router = useRouter();
+
+    const handleClick = (e: React.MouseEvent) => {
+        e.preventDefault();
+        sessionStorage.setItem("introSkipped", "true");
+        router.push("/");
+    };
+
     // If on home page, use Link for smooth scrolling
     // If not on home page, use Next.js navigation to home page with section hash
     return (
@@ -28,15 +34,18 @@ const NavItem: React.FC<NavItemProps> = ({ to, delay, children, pathname }) => {
         text-right font-nunitosans font-bold tracking-wide text-xs md:text-sm hover:text-base 
         py-[0.25rem] pointer-events-auto transition-transform duration-300 ease-in-out`}>
             {isHomePage ? (
-                <Link href="#" to={to} spy={true} smooth={true} duration={500}>{children}</Link>
+                <Link href="" to={to} smooth={true} duration={500} spy={true}>{children}</Link>
             ) : (
-                <a href={`/?skipIntro=true${to !== "/" ? `#${to}` : ""}`}>{children}</a>
+                to === "/" ? (
+                    <a href="/" onClick={handleClick}>{children}</a>
+                ) : (
+                    <a href={`/#${to}`}>{children}</a>
+                )
             )}
         </div>
     );
 };
 
-// subcomponent : individual icons
 interface IconLinkProps {
     href?: string,
     delay: string,
@@ -61,8 +70,7 @@ interface NavbarProps {
 }
 
 const Navbar: React.FC<NavbarProps> = ({ handleMusic, isPlaying }) => {
-    
-    // setting the color of the navbar based on pathname
+
     const pathname = usePathname();
     const [color, setColor] = useState<string>("text-transparent");
 
@@ -71,7 +79,6 @@ const Navbar: React.FC<NavbarProps> = ({ handleMusic, isPlaying }) => {
         setColor(isWhite ? "text-white" : "text-stone-500");
     }, [pathname]);
 
-    // animating the music icon
     const [flipped, setFlipped] = useState(false)
 
     useEffect(() => {
@@ -91,6 +98,7 @@ const Navbar: React.FC<NavbarProps> = ({ handleMusic, isPlaying }) => {
                     <NavItem to="/" delay="delay-600" pathname={pathname}>HOME</NavItem>
                     <NavItem to="about" delay="delay-700" pathname={pathname}>ABOUT</NavItem>
                     <NavItem to="work" delay="delay-800" pathname={pathname}>WORK</NavItem>
+                    <NavItem to="blog" delay="delay-900" pathname={pathname}>BLOG</NavItem>
                 </ul>
             </div>
             <div className="fixed bottom-0 left-0 m-nav drop-shadow-md">

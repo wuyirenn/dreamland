@@ -10,7 +10,7 @@ const Work = () => {
     const router = useRouter();
 
     const items = useMemo(() => [
-        { name: "Photography", image: "/assets/images/photography/DSCF6105.jpg", link: "/photography", 
+        { name: "Photography", image: "/assets/images/photography/DSCF6105.jpg", link: "/work/photography", 
             description: "Shot on my trusty Fujifilm X-T3 and edited in Capture One." 
         },
         { name: "Composites", image: "/assets/images/composites/bumblebees.jpg", link: "/composites",

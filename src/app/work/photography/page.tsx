@@ -2,10 +2,10 @@
 
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
 
-import Navbar from '../../components/ui/navbar';
-import LightboxModal from '../../components/ui/lightbox';
+import Navbar from '../../../components/ui/navbar';
+import LightboxModal from '../../../components/ui/lightbox';
 import imageCollection from './image-data';
-import Cursor from '../../components/ui/cursor';
+import Cursor from '../../../components/ui/cursor';
 
 // Define proper types for your image data
 interface ImageData {

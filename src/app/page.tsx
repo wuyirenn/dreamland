@@ -5,6 +5,7 @@ import Navbar from "@/components/ui/navbar";
 import Intro from "@/components/cards/intro";
 import AboutMe from "@/components/cards/about-me";
 import Work from "@/components/cards/work";
+import Blog from "@/components/cards/blog";
 import Cursor from "@/components/ui/cursor";
 import Button from "@/components/ui/button";
 import ShootingStars from "@/components/ui/shooting-stars";
@@ -12,14 +13,18 @@ import StarsBackground from "@/components/ui/stars-background";
 import { useSearchParams } from "next/navigation";
 
 function HomeContent() {
-  const searchParams = useSearchParams();
-  const skipIntro = searchParams.get('skipIntro') === 'true';
-
   const [isActive, setIsActive] = useState(false);
   const [radius, setRadius] = useState(20);
-  const [start, setStart] = useState(skipIntro);
+  const [start, setStart] = useState(true);
   const [isPlaying, setPlaying] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
+
+  useEffect(() => {
+    const hasSkipped = sessionStorage.getItem("introSkipped") === "true";
+    if (!hasSkipped) {
+      setStart(false);
+    }
+  }, []);
   
   useEffect(() => {
     if (isPlaying && !audioRef.current) {
@@ -67,11 +72,13 @@ function HomeContent() {
   }, []);
 
   const musicStart = useCallback(() => {
+    sessionStorage.setItem("introSkipped", "true");
     setStart(true);
     setPlaying(true);
   }, []);
 
   const skipAudio = useCallback(() => {
+    sessionStorage.setItem("introSkipped", "true");
     setStart(true);
   }, []);
 
@@ -93,10 +100,14 @@ function HomeContent() {
             <Button>START</Button>
           </div>
           <a className="fixed bottom-20 underline text-white font-nunitosans opacity-0 animate-fadeIn animation-delay-1000 animation-duration-1000" 
-            onClick={skipAudio} 
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              skipAudio();       
+            }}
             onMouseOver={() => handleOver(46)} 
             onMouseLeave={() => handleLeave(22)}
-            href="#">
+          >
             enter without audio
           </a>
         </div>  
@@ -121,16 +132,23 @@ function HomeContent() {
       </div>
       <div id="about" className="flex flex-col w-full min-h-[100vh] items-center justify-center">
         <div className="max-w-xscard sm:max-w-smcard md:max-w-card my-12" 
-             onMouseOver={() => handleOver(240)} 
+             onMouseOver={() => handleOver(120)} 
              onMouseLeave={() => handleLeave(22)}>
           <AboutMe />
         </div> 
       </div>
       <div id="work" className="flex flex-col w-full min-h-[100vh] items-center justify-center">
         <div className="max-w-xscard sm:max-w-smcard md:max-w-card my-12 overflow-x-hidden" 
-             onMouseOver={() => handleOver(240)} 
+             onMouseOver={() => handleOver(120)} 
              onMouseLeave={() => handleLeave(22)}>
           <Work />
+        </div> 
+      </div>
+      <div id="blog" className="flex flex-col w-full min-h-[100vh] items-center justify-center">
+        <div className="max-w-xscard sm:max-w-smcard md:max-w-card my-12 overflow-x-hidden" 
+             onMouseOver={() => handleOver(120)} 
+             onMouseLeave={() => handleLeave(22)}>
+          <Blog />
         </div> 
       </div>
     </>
@@ -140,7 +158,7 @@ function HomeContent() {
     if (!start) return null;
     
     return (
-      <div className="absolute top-0 left-0 right-0 w-full h-[300vh] select-none overflow-y-auto opacity-0 animate-fadeIn">
+      <div className="absolute top-0 left-0 right-0 w-full h-[400vh] select-none overflow-y-auto opacity-0 animate-fadeIn">
         <div className="fixed bg-odyssey bg-cover bg-center bg-no-repeat h-screen w-screen -z-[100]"></div>
         {navbar}
         {contentSections}
@@ -159,7 +177,7 @@ function HomeContent() {
 
 export default function Home() {
   return (
-    <Suspense fallback={<div className="w-screen h-screen bg-white transition-all duration-1000"></div>}>
+    <Suspense>
       <HomeContent />
     </Suspense>
   );
