@@ -19,7 +19,7 @@ const BlogPost = ({ post, content }: BlogPostProps) => {
             <div className="text-sm sm:text-base text-stone-500 font-medium">
                 {post.description}
             </div>
-            <div className="text-sm sm:text-base text-stone-500/70 font-medium italic mb-8">
+            <div className="text-sm sm:text-base text-stone-500/70 font-medium italic mb-12">
                 {post.date}
             </div>
             
