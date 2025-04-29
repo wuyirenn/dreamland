@@ -1,10 +1,11 @@
 ## 2025
 **Braiding Sweetgrass | Robin Wall Kimmerer**  
-**Ego Is the Enemy | Ryan Holiday**    
+Ego Is the Enemy | Ryan Holiday    
 Four Thousand Weeks | Oliver Burkeman  
 Inspired | Marty Cagan  
 REWORK | Jason Fried & David Heinemeier Hansson  
 Status as a Service (StaaS) | Eugene Wei  
+**Suburban Nation | Andrés Duany**  
 Trust Me, I'm Lying | Ryan Holiday  
 When California Makes You Sad | Michelle Jia  
 &nbsp;
