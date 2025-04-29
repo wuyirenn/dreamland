@@ -198,11 +198,6 @@ Some personal reminders:
 4. It’s so easy to reach a false understanding. Our interpretations of words are based on our own life experiences and philosophies — a beautiful thing, as it’s so wonderfully human, but which also makes room for harm. [^10] It’s impossible to solve, yet something we should be cognisant of in our day-to-day interactions, and address with grace when harm inevitably occurs.  
 &nbsp;
 
-## Capitalism
-Plainly: Our survival depends on buying into a capitalist system that isn’t set up with our well-being (both people and planetary) at the forefront. There is no such thing as legitimacy in this system if our need for self-preservation is the foundation of our choices, especially not when bad actors use manipulation, misinformation, and ecological fallacy to influence us. [^11]
-
-I am pragmatic. Capitalism is not a system we’re getting away from any time soon, and the same levers that cause harm can be pulled to enact good. But I’m frustrated by those who believe that capitalism is great and that we’ve collectively chosen (with our financial power) to arrive at the current state of the world. Most people (especially those who are suffering) did not choose this, and would gladly take a different option.  
-
 ---
 
 ## Self Preservation
@@ -256,5 +251,3 @@ I hope I take more time to think, reflect, and be.
 [^9]: Here I describe the dance and choice that social platforms have us make before we meet someone. Professional connection? Friend? Potential romantic interest? Or someone I want no involvement with? We choose digital spaces based off what we think we want. Yet I'd posit that most of the time, we don't truly know what we want nor need, and much of the joy comes in the serendipity of discovering previously unknown connections, skills, hobbies, and traits.
 
 [^10]: We as humans have such different life experiences that true understanding is nigh impossible to reach. We share what we believe is important. We often part ways with only cursory comprehension of each other’s thoughts, ideas, and intentions; the rest we backfill with our own interpretation of language and personal knowledge / experiences.
-
-[^11]: I’ve had a number of conversations recently that really frustrated me. It’s easy, especially in a privileged Western world, to attribute elsewhere the harms caused by actors in capitalist systems, when we are the folks who reap the rewards and not the people who suffer as a cost. And it’s scary how the real-world distribution of resources is so far from our day-to-day lives that we can comfortably abstract the effects of war, malnutrition, disaster, and more to just costs and prices in a system.
