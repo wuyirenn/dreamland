@@ -36,7 +36,7 @@ const Blog = () => {
                                         <div className="text-2xl lg:text-3xl xl:text-4xl font-semibold">
                                             {item.title}
                                         </div>
-                                        <div className="text-sm lg:text-base font-medium text-white/70 pb-2 md:pb-4 xl:pb-6">
+                                        <div className="text-sm lg:text-base font-medium text-white/70 pb-2">
                                             {item.description}
                                         </div>
                                     </div>

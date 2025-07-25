@@ -69,9 +69,10 @@ const AboutMe = () => {
                         </div>
                     </div>
                     <ul className="list-none pl-4 max-h-[240px] overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']">
-                        <TimelineEvent role="explore" org="AI x agriculture x urban spaces" year="current" />
-                        <TimelineEvent role="ops" org="streamline climate" year="2024" />
-                        <TimelineEvent role="founder" org="pallet" year="2023" />
+                        <TimelineEvent role="founder / exploring" org="building community, local businesses" year="current" />
+                        <TimelineEvent role="chief of staff" org="halo" year="2025 - current" />
+                        <TimelineEvent role="ops" org="streamline climate" year="2024 - 2025" />
+                        <TimelineEvent role="founder" org="pallet" year="2023 - 2024" />
                         <TimelineEvent role="research" org="brown x nasa ames" year="2023" />
                         <TimelineEvent role="film & design" org="freelance" year="2018 - 2022" />
                     </ul>
