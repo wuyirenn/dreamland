@@ -7,7 +7,9 @@ REWORK | Jason Fried & David Heinemeier Hansson
 Status as a Service (StaaS) | Eugene Wei  
 **Suburban Nation | Andrés Duany**  
 Trust Me, I'm Lying | Ryan Holiday  
+Venture Deals | Brad Feld & Jason Mendelson  
 When California Makes You Sad | Michelle Jia  
+Zen and the Art of Motorcycle Maintenance | Robert Pirsig
 &nbsp;
 
 ## 2024
