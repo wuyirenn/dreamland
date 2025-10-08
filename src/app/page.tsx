@@ -144,13 +144,13 @@ function HomeContent() {
           <Work />
         </div> 
       </div>
-      <div id="blog" className="flex flex-col w-full min-h-[100vh] items-center justify-center">
+      {/* <div id="blog" className="flex flex-col w-full min-h-[100vh] items-center justify-center">
         <div className="max-w-xscard sm:max-w-smcard md:max-w-card my-12 overflow-x-hidden" 
              onMouseOver={() => handleOver(120)} 
              onMouseLeave={() => handleLeave(22)}>
           <Blog />
         </div> 
-      </div>
+      </div> */}
     </>
   ), [handleOver, handleLeave]);
 
@@ -158,7 +158,7 @@ function HomeContent() {
     if (!start) return null;
     
     return (
-      <div className="absolute top-0 left-0 right-0 w-full h-[400vh] select-none overflow-y-auto opacity-0 animate-fadeIn">
+      <div className="absolute top-0 left-0 right-0 w-full h-[300vh] select-none overflow-y-auto opacity-0 animate-fadeIn">
         <div className="fixed bg-odyssey bg-cover bg-center bg-no-repeat h-screen w-screen -z-[100]"></div>
         {navbar}
         {contentSections}

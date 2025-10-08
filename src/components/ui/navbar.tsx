@@ -98,7 +98,13 @@ const Navbar: React.FC<NavbarProps> = ({ handleMusic, isPlaying }) => {
                     <NavItem to="/" delay="delay-600" pathname={pathname}>HOME</NavItem>
                     <NavItem to="about" delay="delay-700" pathname={pathname}>ABOUT</NavItem>
                     <NavItem to="work" delay="delay-800" pathname={pathname}>WORK</NavItem>
-                    <NavItem to="blog" delay="delay-900" pathname={pathname}>BLOG</NavItem>
+                    <div className="opacity-0 animate-fadeIn duration-700 delay-900 
+                        text-right font-nunitosans font-bold tracking-wide text-xs md:text-sm hover:text-base 
+                        py-[0.25rem] pointer-events-auto transition-transform duration-300 ease-in-out"
+                    >
+                        <a href="https://wuyirenn.substack.com/">BLOG</a>
+                    </div>
+                    {/* <NavItem to="blog" delay="delay-900" pathname={pathname}>BLOG</NavItem> */}
                 </ul>
             </div>
             <div className="fixed bottom-0 left-0 m-nav drop-shadow-md">

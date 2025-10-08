@@ -17,16 +17,16 @@ const Work = () => {
             description: "Trying to capture the wonder of nature. Made with Photoshop, my photography, and stock images."
         },
         { name: "Sketches", image: "", link: "/work/coming-soon",
-            description: "People on pen and paper, inspired by the late Jason Polan. Currently procrastinating on scanning them."
+            description: "People on pen and paper, inspired by the late Jason Polan. Need to scan my sketchbooks."
         },
         { name: "Projects", image: "", link: "/work/coming-soon",
             description: "Behind the scenes of apps and websites I've built. Coming soon."
         },
-        { name: "FOAF", image: "", link: "/work/friend-of-a-friend",
-            description: "An (in-progress) social app that connects you with friends of friends based on your location."
+        { name: "Library", image: "", link: "/blog/library",
+            description: "Things I've read that stood out."
         },
         { name: "Archives", image: "", link: "/work/coming-soon",
-            description: "A personal history of architecture, art, film, and more. Many mishaps here. :D"
+            description: "A personal history of architecture, art, film, and more. Many mishaps. :D"
         }
     ], []);
 
@@ -73,8 +73,8 @@ const Work = () => {
                         </ul>
                     </div>
                     <br className="md:hidden" />
-                    <div className="flex flex-col h-full md:col-span-4 drop-shadow-md">
-                        <div className="relative left-1 h-full w-2/3 xl:w-[70%] outline outline-1 outline-white bg-white bg-opacity-20 md:ml-4 mb-2">
+                    <div className="flex flex-col w-2/3 xl:w-[70%] h-full md:col-span-4 drop-shadow-md">
+                        <div className="relative left-1 h-full outline outline-1 outline-white bg-white bg-opacity-20 md:ml-4 mb-2">
                             {items.map(item => item.image && (
                                 <div
                                     key={item.name}
@@ -91,7 +91,7 @@ const Work = () => {
                                 </div>
                             ))}
                         </div>
-                        <div className="w-2/3 xl:w-[70%] md:ml-4 text-xs lg:text-sm font-medium">
+                        <div className="md:ml-4 text-xs lg:text-sm font-medium">
                             {items.map(item => (
                                 <div 
                                     key={item.name}
