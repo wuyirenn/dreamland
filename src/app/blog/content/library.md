@@ -1,9 +1,14 @@
+## 2026
+...
+&nbsp;
+
 ## 2025
 **Braiding Sweetgrass | Robin Wall Kimmerer**  
 Careless People | Sarah Wynn-Williams  
 Ego Is the Enemy | Ryan Holiday    
 Four Thousand Weeks | Oliver Burkeman  
 Inspired | Marty Cagan  
+One Day, Everyone Will Have Always Been Against This | Omar El Akkad  
 **One Man's View of the World | Lee Kuan Yew**  
 REWORK | Jason Fried & David Heinemeier Hansson  
 Status as a Service (StaaS) | Eugene Wei  

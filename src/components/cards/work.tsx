@@ -17,17 +17,20 @@ const Work = () => {
             description: "Trying to capture the wonder of nature. Made with Photoshop, my photography, and stock images."
         },
         { name: "Sketches", image: "", link: "/work/coming-soon",
-            description: "People on pen and paper, inspired by the late Jason Polan. Need to scan my sketchbooks."
+            description: "People on ink and paper. Need to scan my sketchbooks."
         },
-        { name: "Projects", image: "", link: "/work/coming-soon",
-            description: "Behind the scenes of apps and websites I've built. Coming soon."
-        },
+        // { name: "Projects", image: "", link: "/work/coming-soon",
+        //     description: "Behind the scenes of apps and websites I've built. Coming soon."
+        // },
         { name: "Library", image: "", link: "/blog/library",
             description: "Things I've read that stood out."
         },
-        { name: "Archives", image: "", link: "/work/coming-soon",
-            description: "A personal history of architecture, art, film, and more. Many mishaps. :D"
-        }
+        { name: "Blog", image: "", link: "https://wuyirenn.substack.com/",
+            description: "Writing about people, purpose, and tech."
+        },
+        // { name: "Archives", image: "", link: "/work/coming-soon",
+        //     description: "A personal history of architecture, art, film, and more. Many mishaps. :D"
+        // }
     ], []);
 
     const handleMouseEnter = useCallback((name: string) => {

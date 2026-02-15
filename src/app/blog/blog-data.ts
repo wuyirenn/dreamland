@@ -8,7 +8,7 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
     {
     title: "Library",
-    date: "last updated: March 2025",
+    date: "last updated: December 2025",
     description: "things I've read that stood out",
     slug: "library",
     },
