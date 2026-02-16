@@ -51,8 +51,8 @@ const AboutMe = () => {
                         And I strive to share my love and perspective through my art today.`}
                     </div>
                     <div className="md:col-span-2 xl:col-span-3">
-                        {`I'm passionate about using story and technology to inspire care and connection, and my exploration has led me across film, design, tech, and hospitality.
-                        I'm looking to work on mission-driven projects that put people first and create a better world.`}
+                        {`I'm passionate about using story and technology to inspire empathy and care, and my exploration has led me across film, design, tech, and hospitality.
+                        I'm looking to work on mission-driven projects that put people first and create a more connected world.`}
                     </div>
                     <div className="col-span-full xl:col-span-2">
                         {`Most importantly, I aspire to live and lead with gratitude, humility, and grace always at the forefront.
