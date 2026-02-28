@@ -16,8 +16,8 @@ const Work = () => {
         { name: "Composites", image: "/assets/images/composites/bumblebees.jpg", link: "/work/composites",
             description: "Trying to capture the wonder of nature. Made with Photoshop, my photography, and stock images."
         },
-        { name: "Sketches", image: "", link: "/work/coming-soon",
-            description: "People on ink and paper. Need to scan my sketchbooks."
+        { name: "Sketches", image: "", link: "https://wuyirenn.art",
+            description: "People on ink and paper. Always another sketchbook to scan."
         },
         // { name: "Projects", image: "", link: "/work/coming-soon",
         //     description: "Behind the scenes of apps and websites I've built. Coming soon."
